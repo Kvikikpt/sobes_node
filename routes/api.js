@@ -52,7 +52,6 @@ router.post('/get_token', async function(req, res, next) {
         });
     }
     else {
-        console.log('a')
         res.json({code: 1});
     }
 });
@@ -86,7 +85,6 @@ router.post('/save_activity', token_check, function(req, res, next) {
                             ${date}
                             )`, function (err) {
                                 if (err) {
-                                    console.log(err)
                                     error = true;
                                 }
                                 completed.push(index);
@@ -115,7 +113,6 @@ router.post('/save_activity', token_check, function(req, res, next) {
                         }
                     }
                     else {
-                        console.log('b');
                         res.json({code: 1});
                     }
                 });
